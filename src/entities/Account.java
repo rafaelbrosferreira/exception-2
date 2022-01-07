@@ -50,18 +50,7 @@ public class Account {
 
 	public void deposit(double deposit) {
 
-		String d = String.valueOf(deposit);
-
-		if (d.contains("^[a-Z]")) {
-
-			throw new BusinessException("Invalid");
-
-		} else {
-			
-			Double e = Double.parseDouble(d);
-
-			this.balance += e;
-		}
+		this.balance += deposit;
 
 	}
 
